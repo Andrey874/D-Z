@@ -9,7 +9,8 @@
 
 ### Ломаем один диск
 
-`sudo mdadm /dev/md0 --fail /dev/sdd`
+`sudo mdadm /dev/md0 --fail /dev/sdd`  
+
 ![fail](https://github.com/Andrey874/D-Z/blob/master/2fail.jpg)
 ### Удаляем диск
 `sudo mdadm --remove /dev/md0  /dev/sdd`
