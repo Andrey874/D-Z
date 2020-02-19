@@ -37,26 +37,39 @@
 ###### затем w - записать и выйти
 
 ### делаем 5 порций
-`sudo parted /dev/md0 mkpart primary ext4 0% 20%`
-`sudo parted /dev/md0 mkpart primary ext4 20% 40%`
-`sudo parted /dev/md0 mkpart primary ext4 40% 60%`
-`sudo parted /dev/md0 mkpart primary ext4 60% 80%`
-`sudo parted /dev/md0 mkpart primary ext4 80% 100%`
+`sudo parted /dev/md0 mkpart primary ext4 0% 20%`  
+
+`sudo parted /dev/md0 mkpart primary ext4 20% 40%`  
+
+`sudo parted /dev/md0 mkpart primary ext4 40% 60%`  
+
+`sudo parted /dev/md0 mkpart primary ext4 60% 80%`  
+
+`sudo parted /dev/md0 mkpart primary ext4 80% 100%`  
+
 
 ![part](https://github.com/Andrey874/D-Z/blob/master/4partition.jpg)
 
 ### Накатывем на них файловую систему
- `sudo mkfs.ext4 /dev/md0p1`
- `sudo mkfs.ext4 /dev/md0p2`
- `sudo mkfs.ext4 /dev/md0p3`
- `sudo mkfs.ext4 /dev/md0p4`
+ `sudo mkfs.ext4 /dev/md0p1`  
+ 
+ `sudo mkfs.ext4 /dev/md0p2`  
+ 
+ `sudo mkfs.ext4 /dev/md0p3`  
+ 
+ `sudo mkfs.ext4 /dev/md0p4`  
+ 
  `sudo mkfs.ext4 /dev/md0p5`
 
 ### Монитруем порциии
-`sudo mount /dev/md0p1 /myraid5/part1`
-`sudo mount /dev/md0p2 /myraid5/part2`
-`sudo mount /dev/md0p3 /myraid5/part3`
-`sudo mount /dev/md0p4 /myraid5/part4`
+`sudo mount /dev/md0p1 /myraid5/part1`  
+
+`sudo mount /dev/md0p2 /myraid5/part2`  
+
+`sudo mount /dev/md0p3 /myraid5/part3`  
+
+`sudo mount /dev/md0p4 /myraid5/part4`  
+
 `sudo mount /dev/md0p5 /myraid5/part5`
 
 ### смортим blkid и прописываем в /etc/fstab в виде
